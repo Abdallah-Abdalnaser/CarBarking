@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  .parking {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px #b1b1b1;
+    width: 100vw;
+    h1 {
+      width: fit-content;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 35px;
+      font: {
+        size:18px;
+        weight:600;
+      }
+    }
+    .cars {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      .car {
+        display: flex;
+        // flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 350px;
+        text-align: center;
+        margin: 10px;
+        border-radius: 10px;
+        font-size: 25px;
+        font-weight: 700;
+        color: white;
+        transition: 0.3s;
+        box-shadow:0px 0px 25px #ccc;
+        &:hover {
+          transform:scale(1.02);
+        }
+        > span {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: green;
+          height: 100%;
+          border-radius: 10px;
+          flex: 4;
+          fa-icon {
+            font-size: 80px;
+          }
+          &.active {
+            background-color: red;
+          }
+        }
+        .parkinginfo {
+          flex: 4;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          .EntryTime,.ExitTime {
+            position: relative;
+            color: black;
+            ul {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transform: translateX(20%);
+              padding: 0px;
+              margin: 0px;
+              li {
+                list-style: none;
+                background-color: #eee;
+                padding: 6px 10px;
+                border-radius: 5px;
+                span {
+                  margin: 0;
+                }
+              }
+              span {
+                margin: 0px 5px;
+              }
+            }
+            &::before {
+              content: attr(data-text);
+              position: absolute;
+              top: -30px;
+              left: 10%;
+              font: {
+                size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h5 {
+        margin: 0px;
+        margin-top: 17px;
+        background-color: cornflowerblue;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="parking">
+    <h1>Cars Parking</h1>
+    <div class="cars">
+      <div class="car">
+        <span [ngClass]="{active: B1Status === false}">
+          <fa-icon [icon]="faCar"></fa-icon>
+          Parking One
+        </span>
+        <div class="parkinginfo">
+          <div class="EntryTime" data-text="Timer">
+            <ul>
+              <li>{{Timer1.hour}}</li>
+              <span>:</span>
+              <li>{{Timer1.min}}</li>
+              <span>:</span>
+              <li>{{Timer1.sec}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="car">
+        <span [ngClass]="{active: B2Status === false}">
+          <fa-icon [icon]="faCar"></fa-icon>
+          Parking Two
+        </span>
+        <div class="parkinginfo">
+          <div class="EntryTime" data-text="Timer">
+            <ul>
+              <li>{{Timer2.hour}}</li>
+              <span>:</span>
+              <li>{{Timer2.min}}</li>
+              <span>:</span>
+              <li>{{Timer2.sec}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="info">
+      <h5>Cars parked: {{carsParking}}</h5>
+    </div>
+  </div>
+</div>
